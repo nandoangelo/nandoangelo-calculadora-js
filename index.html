@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Uma calculadora simples feita em com HTML, CSS e Javascript">
+		<title>Calculadora HTML/CSS/JS</title>
+		<meta author="Fernando Angelo">
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+		<!-- Ícone do site -->
+		<link rel="shortcut icon" type="image/png" href="img/icon-calculadora.png" >
+		<!-- Estilo -->
+		<link rel="stylesheet" href="css/estilo.css">
+	</head>
+	<body> 
+		<div class="calculadora">
+			<h1>CALCULADORA</h1>
+			<form name="form">
+				<input type="text" id="display" name="display" placeholder="0" readonly="readonly" title="Digite usando o teclado da calculadora">
+			</form>
+			<table class="teclado">
+				<!-- Definindo a largura de cada coluna -->
+				<col width="25%">
+				<col width="25%">
+				<col width="25%">
+				<col width="25%">
+				<tr>
+					<td><input type="button" value="C" onclick="limpar()" title="Limpar tela" class="btn btn-cinza"></td>
+					<td><input type="button" value="<" onclick="voltar()" title="Apagar último" class="btn btn-cinza"></td>
+					<td><input type="button" value="÷" onclick="insert('/')" title="Divisão" class="btn btn-cinza"></td>
+					<td><input type="button" value="X" onclick="insert('*')" title="Multiplicação" class="btn btn-cinza"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="7" onclick="insert(7)" class="btn"></td>
+					<td><input type="button" value="8" onclick="insert(8)" class="btn"></td>
+					<td><input type="button" value="9" onclick="insert(9)" class="btn"></td>
+					<td><input type="button" value="-" onclick="insert('-')" title="Subtração" class="btn btn-cinza"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="4" onclick="insert(4)" class="btn"></td>
+					<td><input type="button" value="5" onclick="insert(5)" class="btn"></td>
+					<td><input type="button" value="6" onclick="insert(6)" class="btn"></td>
+					<td><input type="button" value="+" onclick="insert('+')" title="Adição" class="btn btn-cinza"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="1" onclick="insert(1)" class="btn"></td>
+					<td><input type="button" value="2" onclick="insert(2)" class="btn"></td>
+					<td><input type="button" value="3" onclick="insert(3)" class="btn"></td>
+					<td rowspan="2" style="height: 104px;"><input type="button" value="=" onclick="igual()" title="Igual" class="btn btn-vermelho"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="+/-" onclick="mudasinal()" title="Muda o sinal" class="btn btn-cinza"></td>
+					<td><input type="button" value="0" onclick="insert(0)" class="btn"></td>
+					<td><input type="button" value="." onclick="insert('.')" class="btn btn-cinza"></td>
+				</tr>
+			</table>
+		</div>
+		<script src="js/funcionamento.js"></script>
+	</body>
+</html>

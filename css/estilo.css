@@ -1,0 +1,87 @@
+@charset 'utf-8';
+
+/* 
+*   estilo.css
+*   versão: 1.0.0
+*   data:   2020-02-18
+*   autor:  Fernando Angelo
+*   email:  nandoangelo@gmail.com
+*
+*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  text-align: center;
+  font: 15pt Arial;
+  background: rgb(238,174,202);
+  background: linear-gradient(
+    70deg, rgba(238,174,202,1) 0%,
+    rgba(148,187,233,1) 100%);
+}
+h1 {
+  font-family: 'Oxanium', cursive;
+  font-weight: bold;
+  font-size: 1.25em;
+  letter-spacing: 0.15em;
+  color: #fff;
+  margin-top: 1em;
+}
+.calculadora {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-65%);
+}
+.teclado {
+  width: 280px;
+  border-spacing: 6px;
+  margin: 0.5em auto;
+}
+.teclado td {
+  height: 50px;
+  font-size: 10pt;
+}
+#display {
+  width: 270px;
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive;
+  font-size: 1em;
+  text-align: right;
+  padding: 15px 20px;
+  margin-top: 1em;
+}
+/* Definindo o tamanho padrão dos botões */
+input[type="button"] {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s all;
+  opacity: 0.95;
+}
+input[type="button"]:hover {
+  opacity: 0.65;
+}
+/* Estilo dos botões */
+.btn {
+  background-color: #fafafa;
+  border: 1px solid #d6d6d6;
+}
+.btn-vermelho { 
+  background-color: #de5f5a;
+  border-color: #c84944;
+  color: #fff;
+}
+.btn-cinza {
+  background-color: #dfdfdf;
+  border-color: #bdbdbd;
+}
