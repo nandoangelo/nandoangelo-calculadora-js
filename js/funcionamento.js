@@ -26,7 +26,7 @@ function voltar() {
   display.value = expressao.substring(0,expressao.length-1);
 }
 
-// Converte o sinal
+// Converte o sinal multiplicando o valor por -1
 function mudasinal() {
   var display = document.getElementById('display');
   display.value = display.value * -1;
